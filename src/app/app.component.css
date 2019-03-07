@@ -1,0 +1,103 @@
+.head {
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: -webkit-xxx-large;
+    font-weight: 500;
+}
+.content-header {
+    text-align: center;
+    background: orange;
+    position: relative;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-bottom: 15px;
+    padding: 15px 15px 15px 15px;
+  }
+  .dialogBox {
+    position: fixed;
+  }
+  .search-bar {
+    display: inline-block;
+    height: 30px;
+    padding-left: 10px;
+    /* margin-left: 20px; */
+    width: 40%;
+  }
+  .filters {
+    /* position: relative; */
+    padding-left: 80px;
+      margin-top: 15px;
+      padding-top: 15px;
+      background: burlywood;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-size: larger;
+      font-weight: 600;
+  }
+  .filter {
+      padding-bottom: 15px;
+  }
+  .content {
+    /* text-align: center; */
+    margin-top: 15px;
+    padding-top: 15px;
+    margin-right: auto;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+    font-weight: 800;
+    background: grey;
+    margin-left: auto;
+    color: white;
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 10px;
+    padding: 10px 10px 10px 10px;
+    grid-auto-rows: minmax(10px, auto);
+  }
+  .wrapper-1 {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 10px;
+    padding: 10px 10px 10px 10px;
+    grid-auto-rows: minmax(10px, auto);
+  }
+  .wrapper-1:hover {
+      background: beige;
+      color: black;
+      cursor: pointer;
+  }
+  .one {
+    grid-column: 1 / 7;
+    grid-row: 1;
+  }
+  .two { 
+    grid-column: 2 / 7;
+    grid-row: 1;
+  }
+  .three {
+    grid-column: 3 / 7;
+    grid-row: 1;
+  }
+  .four {
+    grid-column: 4/7;
+    grid-row: 1;
+  }
+  .five {
+    grid-column: 5/7;
+    grid-row: 1;
+  }
+  .six {
+    grid-column: 6/7;
+    grid-row: 1;
+  }
+  .seven {
+    grid-column: 7/7;
+    grid-row: 1;
+  }
+  .dataWrapper {
+    font-weight: 300;
+    font-size: medium;
+  }

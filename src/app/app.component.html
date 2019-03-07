@@ -1,0 +1,79 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<section class = "content-header">
+    <div class="head">Welcome to Stock Archives</div>
+</section>
+<section class = "filters">
+    <!-- <div class = "filter">Filter</div> -->
+    <div class = "filter">
+        <div class="one">
+            Filter Your Symbol!
+        </div>
+        <div>
+            <input class = "search-bar" type="text" placeholder="Enter the symbol and press enter!" [(ngModel)]="search" (keyup.enter)="searchSymbol($event.target.value, 0, 100)"> 
+        </div>       
+    </div>
+    <div>
+        sorted by: Highest Stocks Sold On Any Day
+    </div>
+    <dialog open *ngIf="showDialog == 1" (mouseleave)="openSymbol('')" class="dialogBox">
+            <div> Symbol: {{dataDialog.symbol}}</div>
+            <div> Date: {{dataDialog.date | date }}</div>
+            <div> Change throughout the Day: {{(dataDialog.close - dataDialog.open)}}</div>
+            <div> Volume: {{dataDialog.volume}}</div>
+        </dialog>
+        <dialog close *ngIf="showDialog == 0">
+        </dialog>
+</section>
+<!-- <section class = "symbolDialog" *ngIf="showDialog == 1"> -->
+
+<!-- </section> -->
+<section class = "content">
+    <div class = "wrapper">
+        <div class="one">
+            Date
+        </div>
+        <div class="two">
+            Symbol
+        </div>
+        <div class="three">
+            Volume
+        </div>
+        <div class = "four">
+            Open
+        </div>
+        <div class = "five">
+            Close
+        </div>
+        <div class = "six">
+            High
+        </div>
+        <div class = "seven">
+            Low
+        </div>
+    </div>
+    <div *ngFor = "let data of restItems">
+        <div class = "wrapper-1" (click)="openSymbol(data)">
+            <div class="one dataWrapper">
+                {{(data.date | date)}}
+            </div>
+            <div class="two dataWrapper">
+                {{data.symbol}}
+            </div>
+            <div class="three dataWrapper">
+                {{data.volume}}
+            </div>
+            <div class="four dataWrapper">
+                {{(data.open)}}
+            </div>
+            <div class="five dataWrapper">
+                {{data.close}}
+            </div>
+            <div class="six dataWrapper">
+                {{data.high}}
+            </div>
+            <div class = "seven dataWrapper">
+                {{data.low}}
+            </div>
+        </div>
+    </div>    
+</section>
